@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- Main content container -->
+    <div class="content">
+        <!-- Controls for the image editor -->
+        <div class="controls-container">
+            <label for="file_input" class="custom-file-input">Upload</label>
+            <input type="file" id="file_input" class="hidden" multiple accept="image/*">
+
+            <input type="range" id="blur-range" min="1" max="50" value="25">
+            <!-- Text inputs for additional information -->
+            <label for="idcName">IDC:</label>
+            <input type="text" id="idc" name="idcName" value="평촌IDC"><br>
+
+            <label for="vendorName">Vendor:</label>
+            <input type="text" id="vendor" name="vendorName" value="하이넷"><br>
+
+            <label for="creatorName">Creator:</label>
+            <input type="text" id="creator" name="creatorName" value="변규섭"><br>
+
+            <label for="date">CreateAt:</label>
+            <input type="date" id="date" name="date">
+        </div>
+        <!-- Container for the canvas elements -->
+        <div class="canvas-container" id="slideContainer">
+        </div>
+        <!-- Navigation buttons container -->
+        <div class="navigation-buttons-container" id="navigationButtonsContainer">
+            <button class="nav-button prev" id="previousButton">Previous</button>
+            <button class="nav-button next" id="nextButton">Next</button>
+            <button class="nav-button clear" id="resetButton">Clear</button>
+            <button class="nav-button save" id="save-btn" type="submit">Save</button>
+        </div>
+    </div>
+
+    <!-- External libraries and scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="./js/script.js"></script>
+
+</body>
+
+</html>
